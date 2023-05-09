@@ -12,3 +12,23 @@ public class ReverseString {
         System.out.println(str);
     }
 }
+
+//Using variable front and back
+//
+import java.util.*;
+public class LL {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner (System.in);
+        StringBuilder str = new StringBuilder("prishu pandey is a good girl"); //Saved some time and memory here.
+        int n = str.length();
+        for(int i=0;i<n/2;i++) {
+            int front = i;
+            int back = n-i-1;
+            char frontChar = str.charAt(front);
+            char backChar = str.charAt(back);
+            str.setCharAt(front,backChar);
+            str.setCharAt(back,frontChar);
+        }
+        System.out.println(str);
+    }
+}
